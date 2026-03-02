@@ -7,7 +7,8 @@ const mongoose = require('mongoose');
 const todosRouter = require('./Routers/todos');
 
 const app = express();
-const PORT = 5000;
+console.log('Heroku PORT env:', process.env.PORT);
+const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGO_URL || 'mongodb+srv://OSY:!3wonder3!@cluster0.u3yu272.mongodb.net/todo';
 
 // Middleware
